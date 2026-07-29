@@ -13,7 +13,7 @@ The `Calculator` component is the root component and orchestrates the interactio
 The `Calculation` class under `src/logic` computes the results from user input after the user presses *Submit*.
 
 ### Implement the Calculation class
-The `Calculation.calculate()` method should evaluate and calculate the entered input and return the result. If the given expression is wrong or malformed, return `undefined`. Please implement at least the following arithmetic operations: `+, -, *, /`. These are covered by unit tests in `calculation.test.js`. Feel free to extend this set of operations on your own . Add the ability to group expressions by parentheses.
+The `Calculation.calculate()` method should evaluate and calculate the entered input and return the result. If the given expression is wrong or malformed, return `undefined`. Please implement at least the following arithmetic operations: `+, -, *, /`. These are covered by unit tests in `calculation.test.js`. Feel free to extend this set of operations on your own. Add the ability to group expressions by parentheses.
 
 ### Expression Input and Results
 The `ExpressionInput` component should trigger a calculation based on the value of its `TextField`. The result of the computation should be displayed in the `Results` component. Hint: consult the [`TextField` documentation ](https://material-ui.com/components/text-fields/#uncontrolled-vs-controlled) to learn how to react to text input in React components.
