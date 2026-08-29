@@ -1,44 +1,58 @@
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import TextField from "@mui/material/TextField";
-import { ChangeEvent, useEffect, useState } from "react";
+import React, {ChangeEvent, KeyboardEvent} from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 interface ExpressionInputProps {
-  clearExpressionState: Boolean,
+  value: string;
+  onChange: (value: string) => void;
   handleSubmit: (expression: string) => void;
 }
 
-export const ExpressionInput: React.FC<ExpressionInputProps> = ({ handleSubmit, clearExpressionState }) => {
-  const [expressionState, setExpressionState] = useState<string>('');
+export const ExpressionInput: React.FC<ExpressionInputProps> = ({
+  value,
+  onChange,
+  handleSubmit,
+}) => {
+  const onExpressionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange(event.target.value);
+  };
 
-  const onExpressionChange = (event:ChangeEvent<HTMLInputElement>) => {
-    setExpressionState(event.target.value);
-  }
-
-  useEffect(() => {
-      setExpressionState('')
-  },[clearExpressionState])
+  const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      handleSubmit(value.trim());
+    }
+  };
 
   return (
-    <Card>
-      <CardContent>
-        <TextField 
-         fullWidth={true} label="Expression"
-         value={expressionState} 
-         variant="outlined" onChange={onExpressionChange}/>
-      </CardContent>
-      <CardActions>
-        <Button
-          data-testid="button"
-          color="primary"
-          variant="contained"
-          onClick={() => handleSubmit(expressionState.trim())}
-        >
-          Submit
-        </Button>
-      </CardActions>
-    </Card>
+    <Box sx={{display: 'flex', gap: 1, alignItems: 'stretch'}}>
+      <TextField
+       type="number"
+        fullWidth={true}
+        label="Expression"
+        value={value}
+        variant="outlined"
+        size="small"
+        onChange={onExpressionChange}
+        onKeyDown={onKeyDown}
+        inputProps={{'aria-label': 'Expression'}}
+        sx={{
+          '& .MuiOutlinedInput-root': {
+            bgcolor: 'rgba(0,0,0,0.25)',
+            fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
+          },
+        }}
+      />
+      <Button
+        data-testid="button"
+        color="primary"
+        variant="contained"
+        onClick={() => handleSubmit(value.trim())}
+        sx={{flexShrink: 0, px: 2.5}}
+      >
+        Submit
+      </Button>
+    </Box>
   );
 };

@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const ActionButton: React.FC<ButtonProps> = ({onClick, label}) => {
   return (
-    <Button variant="outlined" color="error" onClick={onClick} sx={{mb: 2}}>
+    <Button variant="outlined" color="error" onClick={onClick} sx={{mt: 1, mb: 1}}>
       {label}
     </Button>
   );
