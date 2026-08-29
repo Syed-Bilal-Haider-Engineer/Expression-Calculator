@@ -1,4 +1,4 @@
-# Inline Calculator
+# Expression Calculator
 
 ## Introduction
 
