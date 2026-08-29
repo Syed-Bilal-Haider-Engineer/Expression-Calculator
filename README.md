@@ -13,7 +13,7 @@ The `Calculator` component is the root component and orchestrates the interactio
 The `Calculation` class under `src/logic` computes the results from user input after the user presses *Submit*.
 
 ### Implement the Calculation class
-The `Calculation.calculate()` method should evaluate and calculate the entered input and return the result. If the given expression is wrong or malformed, return `undefined`. Please implement at least the following arithmetic operations: `+, -, *, /`. These are covered by unit tests in `calculation.test.js`. Feel free to extend this set of operations on your own. Add the ability to group expressions by parentheses.
+The `Calculation.calculate()` method should evaluate and calculate the entered input and return the result. If the given expression is wrong or malformed, return `undefined`. Please implement at least the following arithmetic operations: `+, -, *, /`. Unit tests in `calculation.test.js` cover these. Feel free to extend this set of operations on your own. Add support for grouping expressions with parentheses.
 
 ### Expression Input and Results
 The `ExpressionInput` component should trigger a calculation based on the value of its `TextField`. The result of the computation should be displayed in the `Results` component. Hint: consult the [`TextField` documentation ](https://material-ui.com/components/text-fields/#uncontrolled-vs-controlled) to learn how to react to text input in React components.
@@ -28,5 +28,3 @@ The results should be ordered with the newest entry as the first element. Additi
 
 The following mock represents the expected result: <img width="1902" height="862" alt="image" src="https://github.com/user-attachments/assets/4349754c-1681-42f8-a908-872140c673c4" />
 
-
-![ExtraFeatures](./extra-features.png "Calculator with more features")
