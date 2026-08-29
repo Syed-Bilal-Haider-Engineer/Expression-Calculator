@@ -28,7 +28,6 @@ export const ExpressionInput: React.FC<ExpressionInputProps> = ({
   return (
     <Box sx={{display: 'flex', gap: 1, alignItems: 'stretch'}}>
       <TextField
-       type="number"
         fullWidth={true}
         label="Expression"
         value={value}
