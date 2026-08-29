@@ -26,8 +26,7 @@ Extend the application by adding a History component that displays the already c
 
 The results should be ordered with the newest entry as the first element. Additionally, it should be possible to clear the entire history using a clear button.
 
-The following mock represents the expected result:</br>![Mock](<img width="1902" height="862" alt="image" src="https://github.com/user-attachments/assets/46c16bca-1111-44b4-9f18-efd2c5e23c65" />
-)
+The following mock represents the expected result: <img width="1902" height="862" alt="image" src="https://github.com/user-attachments/assets/4349754c-1681-42f8-a908-872140c673c4" />
 
 
 ![ExtraFeatures](./extra-features.png "Calculator with more features")
