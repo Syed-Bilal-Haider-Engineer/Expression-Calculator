@@ -5,7 +5,7 @@
 This application uses the JavaScript framework React. It contains a skeleton of a front-end calculator app for inline calculation. Your job is to complete the implementation of the React Components and a few functions responsible for the calculator's logic. Furthermore, you have to implement a second component to store and display a history of the executed calculations.
 
 ## Task Details
-You will find three React components in `src/components/`. They render the application's visuals and control its behaviour.
+You will find three React components in `src/components/`. They render the application's visuals and control its.
 
 The `ExpressionInput` component is responsible for receiving and handling user interactions.
 Finally, the `Results` component should display the result of calculations and show a history of past results.
